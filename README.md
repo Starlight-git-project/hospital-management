@@ -42,22 +42,18 @@ de negócio funcionarem de forma realista
 ### Entregáveis (requisitos do projeto)
 Todo entregável abaixo é obrigatório, exceto onde marcado como opcional. Cada um vira uma issue própria, não iniciem um entregável **sem ele estar como issue aberta e atribuída**.
 
-```
 
-| # | Entregável | Descrição | Pasta sugerida |
-|---|------------|-----------|----------------|
-| 1 | Contexto de negócio | Documento do cenário VitaCare (já iniciado em `docs/`) | `docs/` |
-| 2 | DER / MER | Diagrama completo com cardinalidades, feito em dbdiagram.io ou MySQL Workbench | `modelagem/` |
-| 3 | Dicionário de dados | Tabela → campo → tipo → PK/FK → obrigatoriedade → descrição | `docs/` |
-| 4 | Normalização documentada | Mostrar o "antes" (dado cru) e o "depois" em 1FN/2FN/3FN, com justificativa de cada decomposição | `docs/normalizacao/` |
-| 5 | Script DDL | `CREATE TABLE` completo, com constraints, FKs e tipos corretos | `sql/ddl/` |
-| 6 | Script de carga (ETL) | Python (pandas + SQLAlchemy) ou `LOAD DATA INFILE`, do CSV para o banco | `etl/` |
-| 7 | Perguntas de negócio | Todas as queries SQL respondendo às perguntas em `docs/contexto-e-perguntas-negocio.md` | `sql/queries/` |
-| 8 | Índices | Criação de índices + justificativa técnica (`EXPLAIN` antes/depois) | `sql/indices/` |
-| 9 | Views e Stored Procedures | Mínimo 2 views e 2 stored procedures, cada uma com justificativa de negócio | `sql/views/`, `sql/procedures/` |
-| 10 | Trigger | Pelo menos 1 trigger (ex.: auditoria de cancelamento/remarcação de consulta) | `sql/triggers/` |
-
-```
+- [ ] **1. Contexto de negócio** (`docs/`) - Documento do cenário VitaCare (já iniciado).
+- [ ] **2. DER / MER** (`modelagem/`) - Diagrama completo com cardinalidades, feito em dbdiagram.io ou MySQL Workbench.
+- [ ] **3. Dicionário de dados** (`docs/`) - Tabela → campo → tipo → PK/FK → obrigatoriedade → descrição.
+- [ ] **4. Normalização documentada** (`docs/normalizacao/`) - "Antes" (dado cru) e "depois" em 1FN/2FN/3FN, com justificativa de cada decomposição.
+- [ ] **5. Script DDL** (`sql/ddl/`) — `CREATE TABLE` completo, com constraints, FKs e tipos corretos.
+- [ ] **6. Script de carga (ETL)** (`etl/`) - Python (pandas + SQLAlchemy) ou `LOAD DATA INFILE`, do CSV para o banco.
+- [ ] **7. Perguntas de negócio** (`sql/queries/`) - Todas as queries SQL respondendo às perguntas em `docs/contexto-e-perguntas-negocio.md`.
+- [ ] **8. Índices** (`sql/indices/`) — Criação de índices + justificativa técnica (`EXPLAIN` antes/depois).
+- [ ] **9. Views e Stored Procedures** (`sql/views/`, `sql/procedures/`) - Mínimo 2 views e 1 stored procedures, cada uma com justificativa de negócio.
+- [ ] **10. Trigger** (`sql/triggers/`) - Pelo menos 1 trigger (ex.: auditoria de cancelamento/remarcação de consulta).
+|
 
 ### Requisitos técnicos
 
