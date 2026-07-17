@@ -1,4 +1,4 @@
-## Projeto 03 - Modelagem Relacional | VitaCare
+## Projeto 04 - Modelagem Relacional | VitaCare
 
 ### Sobre o projeto
 
@@ -43,6 +43,7 @@ de negócio funcionarem de forma realista
 Todo entregável abaixo é obrigatório, exceto onde marcado como opcional. Cada um vira uma issue própria, não iniciem um entregável **sem ele estar como issue aberta e atribuída**.
 
 ```
+
 | # | Entregável | Descrição | Pasta sugerida |
 |---|------------|-----------|----------------|
 | 1 | Contexto de negócio | Documento do cenário VitaCare (já iniciado em `docs/`) | `docs/` |
@@ -55,6 +56,7 @@ Todo entregável abaixo é obrigatório, exceto onde marcado como opcional. Cada
 | 8 | Índices | Criação de índices + justificativa técnica (`EXPLAIN` antes/depois) | `sql/indices/` |
 | 9 | Views e Stored Procedures | Mínimo 2 views e 2 stored procedures, cada uma com justificativa de negócio | `sql/views/`, `sql/procedures/` |
 | 10 | Trigger | Pelo menos 1 trigger (ex.: auditoria de cancelamento/remarcação de consulta) | `sql/triggers/` |
+
 ```
 
 ### Requisitos técnicos
@@ -96,3 +98,32 @@ Como fazer download do Postgres + PgAdmin: [Lab01-AWS-DMS página 13](https://dr
 └── etl/
 
 ```
+## Curso de apoio
+
+Antes ou durante o projeto, façam o curso abaixo, ele cobre a base teórica da maior parte dos entregáveis (modelagem, normalização, dicionário de dados, DDL/DML/DQL, JOINs, Views/Procedures/Triggers):
+
+**[Bancos de Dados Relacionais - (Udemy)](https://www.udemy.com/course/curso-completo-de-banco-de-dados-relacionais/?couponCode=KEEPLEARNING)**
+
+O que vocês vão aprender lá:
+- Modelagem Conceitual, Lógica e Física de um projeto de Banco de Dados
+- SQL (DQL, DML, DDL) e T-SQL
+- Normalização (1FN, 2FN, 3FN)
+- Dicionários de Dados
+- Instalação de MySQL, PostgreSQL, SQL Server e Oracle
+- `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN`
+- Triggers, Procedures, Functions e Views
+- Ambientes transacionais
+
+## Material de apoio - ETL (Entregável #6)
+
+Para a issue de carga de dados (#10), que usa Python + pandas + SQLAlchemy,
+os módulos abaixo do curso [Análise de Dados com Python e Pandas](COLE_O_LINK_CERTO_AQUI)
+são suficientes - não precisa fazer o curso inteiro para este projeto:
+
+- Criando o Banco de Dados e a Tabela
+- Inserindo e Lendo Dados
+- Atualizando e Excluindo Dados
+- Utilizando o SQLAlchemy
+
+> O restante do curso (Numpy, Matplotlib/Seaborn/Plotly, dashboards, MongoDB)
+> é ótimo material, mas é escopo do Projeto 04 (camada analítica), não deste projeto.
