@@ -45,7 +45,7 @@ Todo entregável abaixo é obrigatório, exceto onde marcado como opcional. Cada
 ```
 | # | Entregável | Descrição | Pasta sugerida |
 |---|------------|-----------|----------------|
-| 1 | Contexto de negócio | Documento do cenário Leega Health (já iniciado em `docs/`) | `docs/` |
+| 1 | Contexto de negócio | Documento do cenário VitaCare (já iniciado em `docs/`) | `docs/` |
 | 2 | DER / MER | Diagrama completo com cardinalidades, feito em dbdiagram.io ou MySQL Workbench | `modelagem/` |
 | 3 | Dicionário de dados | Tabela → campo → tipo → PK/FK → obrigatoriedade → descrição | `docs/` |
 | 4 | Normalização documentada | Mostrar o "antes" (dado cru) e o "depois" em 1FN/2FN/3FN, com justificativa de cada decomposição | `docs/normalizacao/` |
