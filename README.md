@@ -64,6 +64,8 @@ Todo entregável abaixo é obrigatório, exceto onde marcado como opcional. Cada
 - Versionamento: Git + GitHub, seguindo o fluxo descrito em `CONTRIBUTING.md`
 - Toda decisão de modelagem relevante deve ser **documentada**, não apenas implementada, o "porquê" importa tanto quanto o "como"
 
+Como fazer download do Postgres + PgAdmin: [Lab01-AWS-DMS página 13](https://drive.google.com/file/d/1z0fKpNP-TZn-ol9pDYxvCq-6uuN8O62a/view?usp=sharing)
+
 ### Definição de Pronto (Definition of Done) do projeto
 
 - [ ] Todos os 10 entregáveis estão completos e mergeados na branch principal.
