@@ -1,0 +1,9 @@
+# Atenção, alunos!
+# Este arquivo existe apenas para que o Git versione este diretório.
+#
+# O .gitkeep não é um recurso oficial do Git, mas uma convenção
+# amplamente utilizada para permitir que diretórios vazios sejam
+# incluídos no controle de versão.
+#
+# Quando esta pasta passar a conter arquivos reais, você pode
+# remover este .gitkeep, se desejar.

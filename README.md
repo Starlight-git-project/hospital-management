@@ -4,7 +4,7 @@
 
 A VitaCare (nome fictício) não tem nenhuma estrutura de banco de dados relacional de verdade ,os dados vivem espalhados em planilhas e cadastros soltos. Este projeto é o trabalho de modelar, do zero, o banco de dados transacional (OLTP) dessa nova operação, junto com as consultas SQL que respondem às principais perguntas de negócio das áreas de RH, Financeiro, Diretoria e Recepção/Operações
 
-O contexto de negócio completo e a lista de perguntas de negócio estão em `docs/contexto-e-perguntas-negocio.md`.
+O contexto de negócio completo e a lista de perguntas de negócio estão em [docs/contexto-e-perguntas-negocio.md](https://github.com/Starlight-git-project/hospital-management/blob/main/docs/contexto-perguntas-negocio.md/contexto-perguntas-negocio.md).
 
 ### Objetivo de aprendizagem
 
@@ -25,7 +25,7 @@ Este não é um projeto de "copiar solução pronta". O objetivo é que cada col
 
 ### Equipe
 
-Projeto para 3 colaboradoras. A divisão de tarefas está nas issues do repositório (ver `ISSUES.md`), cada entregável abaixo vira uma ou mais issues, distribuídas entre as três, com revisão cruzada obrigatória (ninguém aprova o próprio PR).
+Projeto para 3 colaboradoras. A divisão de tarefas está nas issues do repositório (ver[ ISSUES.md](https://github.com/Starlight-git-project/hospital-management/blob/main/ISSUES.md)), cada entregável abaixo vira uma ou mais issues, distribuídas entre as três, com revisão cruzada obrigatória (ninguém aprova o próprio PR).
 
 ### Dataset
 
@@ -47,10 +47,10 @@ Todo entregável abaixo é obrigatório, exceto onde marcado como opcional. Cada
 - [ ] **2. DER / MER** (`modelagem/`) - Diagrama completo com cardinalidades, feito em dbdiagram.io ou MySQL Workbench.
 - [ ] **3. Dicionário de dados** (`docs/`) - Tabela → campo → tipo → PK/FK → obrigatoriedade → descrição.
 - [ ] **4. Normalização documentada** (`docs/normalizacao/`) - "Antes" (dado cru) e "depois" em 1FN/2FN/3FN, com justificativa de cada decomposição.
-- [ ] **5. Script DDL** (`sql/ddl/`) — `CREATE TABLE` completo, com constraints, FKs e tipos corretos.
+- [ ] **5. Script DDL** (`sql/ddl/`) - `CREATE TABLE` completo, com constraints, FKs e tipos corretos.
 - [ ] **6. Script de carga (ETL)** (`etl/`) - Python (pandas + SQLAlchemy) ou `LOAD DATA INFILE`, do CSV para o banco.
 - [ ] **7. Perguntas de negócio** (`sql/queries/`) - Todas as queries SQL respondendo às perguntas em `docs/contexto-e-perguntas-negocio.md`.
-- [ ] **8. Índices** (`sql/indices/`) — Criação de índices + justificativa técnica (`EXPLAIN` antes/depois).
+- [ ] **8. Índices** (`sql/indices/`) - Criação de índices + justificativa técnica (`EXPLAIN` antes/depois).
 - [ ] **9. Views e Stored Procedures** (`sql/views/`, `sql/procedures/`) - Mínimo 2 views e 1 stored procedures, cada uma com justificativa de negócio.
 - [ ] **10. Trigger** (`sql/triggers/`) - Pelo menos 1 trigger (ex.: auditoria de cancelamento/remarcação de consulta).
 |
