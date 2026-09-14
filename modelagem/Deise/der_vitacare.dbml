@@ -1,0 +1,66 @@
+// =====================================================
+// ENTIDADES EXTERNAS
+// Normalizadas em outras etapas do projeto
+// =====================================================
+
+Table paciente {
+  id_paciente integer [pk, increment]
+
+  Note: 'Entidade normalizada em outra etapa do projeto.'
+}
+
+Table medico {
+  id_medico integer [pk, increment]
+
+  Note: 'Entidade normalizada em outra etapa do projeto.'
+}
+
+// =====================================================
+// ENTIDADES DO MÓDULO ATUAL
+// =====================================================
+
+Table consulta {
+  id_consulta integer [pk, increment]
+  id_paciente integer [not null]
+  id_medico integer [not null]
+  id_clinica integer [not null]
+  id_convenio integer [not null]
+  data_consulta date [not null]
+  hora_consulta time [not null]
+  motivo_consulta varchar(255)
+  status_consulta varchar(50)
+}
+
+Table clinica {
+  id_clinica integer [pk, increment]
+  nome_clinica varchar(100) [not null, unique]
+}
+
+Table convenio {
+ id_convenio integer [pk, increment]
+  nome_convenio varchar(100) [not null, unique]
+}
+
+Table clinica_convenio {
+  id_convenio integer [not null]
+  id_clinica integer [not null]
+
+  Indexes {
+    (id_convenio, id_clinica) [pk]
+  }
+}
+
+// =====================================================
+// RELACIONAMENTOS (REFS)
+// =====================================================
+
+// Relacionamentos simples das tabelas base para a associativa
+Ref: clinica.id_clinica < clinica_convenio.id_clinica
+Ref: convenio.id_convenio < clinica_convenio.id_convenio
+
+// RELACIONAMENTO COM CHAVE COMPOSTA (Da associativa para a Fato)
+Ref: clinica_convenio.(id_clinica, id_convenio) < consulta.(id_clinica, id_convenio)
+
+// Relacionamentos das entidades externas com a tabela fato
+Ref: paciente.id_paciente < consulta.id_paciente
+Ref: medico.id_medico < consulta.id_medico
