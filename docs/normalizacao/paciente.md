@@ -21,10 +21,10 @@ Na estrutura original do dataset (`patients.csv`), todos os atributos do pacient
 **Regra:** Garantir a atomicidade dos campos (eliminar valores múltiplos/compostos) e definir uma chave primária.
 
 **Justificativa:** 
-O campo `address` continha múltiplos dados combinados (logradouro, número, complemento, bairro, cidade, estado e CEP) em um único texto. Decompomos esse campo em atributos atômicos para permitir buscas, ordenações e filtragens eficientes por cidade, estado ou CEP.
+O campo `address` continha múltiplos dados combinados (logradouro, número, complemento, bairro, cidade, estado e CEP) em um único texto. Decompomos esse campo em atributos atômicos para permitir buscas, ordenações e filtragens eficientes por cidade, estado ou CEP. Além disso, incluímos o campo `cpf` como identificador único nacional para resolver casos de inconsistência ou registros duplicados.
 
 **Tabela Resultante (`paciente_1fn`):**
-* **Atributos:** `patient_id` (PK), `first_name`, `last_name`, `gender`, `date_of_birth`, `contact_number`, `street`, `number`, `complement`, `neighborhood`, `city`, `state`, `zip_code`, `registration_date`, `insurance_provider`, `insurance_number`, `email`.
+* **Atributos:** `patient_id` (PK), `cpf`, `first_name`, `last_name`, `gender`, `date_of_birth`, `contact_number`, `street`, `number`, `complement`, `neighborhood`, `city`, `state`, `zip_code`, `registration_date`, `insurance_provider`, `insurance_number`, `email`.
 
 ---
 
@@ -52,16 +52,17 @@ O campo `address` continha múltiplos dados combinados (logradouro, número, com
 ### Tabela `paciente`
 Representa os dados cadastrais únicos do paciente.
 * `id_paciente` (PK)
-* `primeiro_nome`
+* `cpf` 
+* `nome`
 * `sobrenome`
-* `genero`
+* `sexo`
 * `data_nascimento`
 * `telefone`
 * `email`
 * `data_cadastro`
 * `id_endereco` (FK -> `endereco.id_endereco`)
 * `id_convenio` (FK -> `convenio.id_convenio`)
-* `numero_carteira_convenio`
+* `numero_convenio`
 
 ### Tabela `endereco`
 Centraliza as informações geográficas e atômicas de localização.
